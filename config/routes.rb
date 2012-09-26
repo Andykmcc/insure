@@ -1,4 +1,6 @@
 Insure::Application.routes.draw do
+  resources :examples
+
   devise_for :users
 
   # The priority is based upon order of creation:
