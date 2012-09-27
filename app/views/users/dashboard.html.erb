@@ -1,0 +1,17 @@
+<p>Hello, <%= @user.email %></p>
+<% if @userProducts.count > 0 %>
+	<% @userProducts.each do |p| %>
+		<hr>
+		<%= link_to(p) do %>
+		<%= p.name %>
+		<% end %>
+		<%= link_to(p) do %>
+		<p><%= image_tag p.hero.url %></p>
+		<% end %>
+		<hr>
+	<% end %>
+<% else %>
+<p>You dont have any products!</p>
+<% end %>
+
+<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
