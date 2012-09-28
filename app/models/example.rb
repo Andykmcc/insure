@@ -1,3 +1,0 @@
-class Example < ActiveRecord::Base
-  attr_accessible :age, :name
-end
